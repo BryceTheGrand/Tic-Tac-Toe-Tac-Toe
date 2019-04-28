@@ -141,7 +141,7 @@ function mouseClicked() {
 
   if (turn == 1 || turn == 0) {
 
-    if ((grid[colBoard + rowBoard * 3].active || turn == 0) && grid[colBoard + rowBoard * 3].grid[row % 3][col % 3] == 0) {
+    if ((grid[colBoard + rowBoard * 3].active || turn == 0) && grid[colBoard + rowBoard * 3].grid[row % 3][col % 3] == 0 && grid[colBoard + rowBoard * 3].winner == 0) {
 
       grid[colBoard + rowBoard * 3].grid[row % 3][col % 3] = 1;
       grid[colBoard + rowBoard * 3].active = false;
@@ -161,7 +161,7 @@ function mouseClicked() {
 
   } else if (turn == 2 || turn == 3) {
 
-    if ((grid[colBoard + rowBoard * 3].active || turn == 3) && grid[colBoard + rowBoard * 3].grid[row % 3][col % 3] == 0) {
+    if ((grid[colBoard + rowBoard * 3].active || turn == 3) && grid[colBoard + rowBoard * 3].grid[row % 3][col % 3] == 0 && grid[colBoard + rowBoard * 3].winner == 0) {
 
       grid[(colBoard + rowBoard * 3)].grid[row % 3][col % 3] = -1;
       grid[colBoard + rowBoard * 3].active = false;
