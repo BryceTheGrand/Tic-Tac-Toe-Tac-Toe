@@ -182,6 +182,21 @@ function mouseClicked() {
   }
   
   checkTriplet(colBoard + rowBoard * 3);
+  
+  let count = 0;
+  
+  for (let i = 0; i < 9; i++) {
+    
+   if (grid[i].active) count++; 
+    
+  }
+  
+  if (count == 0) {
+    
+   if (turn == 2) turn = 3;
+    else if (turn == 1) turn = 0;
+    
+  }
 
 }
 

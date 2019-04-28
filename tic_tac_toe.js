@@ -69,8 +69,6 @@ function TicTacToe() {
     if (this.winner != 0) {
       
       this.active = false;
-      if (turn == 2) turn = 3;
-      else if (turn == 1) turn = 0;
       checkGameEnd();
       
     }
